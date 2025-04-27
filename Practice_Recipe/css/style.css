@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: #f7e5f1;
+}
+
+.container {
+    background-color: #ffffff;
+    max-width: 80%;
+    border-radius: 30px;
+    margin: 2rem auto;
+    padding: 2rem;
+}
+
+figure img {
+    width: 100%;
+}
+
+.title {
+    margin: 1.5rem 0;
+    text-align: center;
+    font-size: 2.5rem;
+    font-style: italic;
+}
+
+.paragraph {
+    text-align: justify;
+    line-height: 1.3;
+}
+
+.container-time {
+    width: 100%;
+    margin: 20px auto; /* <-- 'auto' en los lados hace que el cuadro se centre */
+    background-color: #f7e5f1;
+    border-radius: 20px;
+    line-height: 1.5;
+    padding: 20px;
+}
+
+.container-time ul {
+    list-style-position: inside; /* <-- Para que los puntitos estén alineados hacia adentro */
+    padding-left: 0; /* <-- Opcional, para quitar espacio extra si quieres */
+}
+
+.container-time h3 {
+    color: #4d0434;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.subtitule {
+    color: #9a4d09;
+    padding-bottom: 1rem;
+}
+
+/**aplicando estilos a tres contenedores diferentes */
+.container-ingredients, .container-instructions, .container-nutrition{
+    margin-top: 1rem;
+    padding: 1rem;
+    border-bottom: solid 1px #524f4f00;
+}
+
+/* pseudoclase :is ayuda a englobar estilos para varios elementos */
+/* :is(.ingredients-lis,.instructions-list) */
+
+/* .ingredients-list li, .instructions-list li {
+
+} */
+
+:is(.ingredients-lis,.instructions-list) li {
+    padding: 6px 10px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+td {
+    border-bottom: 1px solid #ddd;
+    padding: 0.5rem;
+    text-align: center;
+    color: #000000;
+    font-weight: 700;
+
+}
+
+.container-nutrition td:nth-child(2) {
+    color: rgb(147, 14, 38);
+    font-weight: 700;
+}
+
+
+/* se le coloco un fondo al footer con un ancho y margenes */
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.9em;
+    color: #ffffff;
+    background-color: #333;
+    padding: 1rem;
+}

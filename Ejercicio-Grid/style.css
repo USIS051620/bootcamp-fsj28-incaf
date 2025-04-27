@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --box-color-primary: blue;
+  --box-color-secundary: green;
+  --box-text: #fff;
+  --font-family: 'Arial', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: var(--font-family);
+    background-color: var(--secundary-color);
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+  /* Fila superior: 3 cajas negras distribuidas en 6 columnas */
+.gridbox {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* Cajas de la fila superior */
+.gridbox .box {
+    background-color: var(--box-color-primary);
+    color: var(--box-text);
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+  /* Caja 1: 2 columnas */
+.gridbox .box:nth-child(1) {
+    grid-column: span 2;
+}
+
+  /* Caja 2: 1 columna */
+.gridbox .box:nth-child(2) {
+    grid-column: span 1;
+}
+  /* Caja 3: 3 columna */
+.gridbox .box:nth-child(3) {
+    grid-column: span 3;
+}
+
+  /* Fila inferior: 6 columnas también */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: 150px;
+    gap: 10px;
+}
+
+.grid-container .box {
+    background-color: var(--box-color-secundary);
+    color: var(--box-text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+  /* Caja A: 1 columnas */
+.grid-container .box:nth-child(1) {
+    grid-column: span 1;
+}
+
+  /* Caja B: 4 columnas */
+.grid-container .box:nth-child(2) {
+    grid-column: span 4;
+}
+
+  /* Caja C: 1 columna, 3 filas de alto */
+.grid-container .box:nth-child(3) {
+    grid-column: span 1;
+    grid-row: span 3;
+}
